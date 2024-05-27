@@ -8,7 +8,7 @@ const MovieCard = ({ movie }) => {
   const isFavorite = favorites.some((fav) => fav.id === movie.id);
 
   return (
-    <div className="hover:shadow-xl hover:rounded-xl bg-white transition-all ease-in-out duration-300  hover:scale-110 border rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row md:items-center">
+    <div className="hover:shadow-xl hover:rounded-xl bg-white transition-all ease-in-out duration-300  hover:scale-105 border rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row md:items-center">
       <img
         src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiHaEUyG223_QNGEfxIvMxUHtpByeFPsSKPw&usqp=CAU`}
         alt={movie.movie}

@@ -15,19 +15,21 @@ const MovieList = () => {
   }, [status, dispatch]);
 
   return (
-    <div className="p-10 sm:p-20">
+    <div className="p-5 sm:p-20">
       <p className="text-3xl text-center my-5 font-bold font-serif capitalize">
         movies list
       </p>
       {status === "loading" && (
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center h-80">
           <div className="relative">
             <div className="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-200"></div>
             <div className="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin"></div>
           </div>
         </div>
       )}
-      {status === "failed" && <p>Error: {error}</p>}
+      {status === "failed" && (
+        <p className="text-red-700 text-xl text-center">Error: {error}</p>
+      )}
       {status === "succeeded" && (
         <div className="grid space-y-3 space-x-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {movies.map((movie) => (
