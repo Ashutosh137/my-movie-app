@@ -7,6 +7,9 @@ const FavoriteList = () => {
 
   return (
     <div className="p-4">
+      <p className="text-3xl text-center my-5 font-bold font-serif capitalize">
+        favorite movies list
+      </p>
       {favorites.length === 0 ? (
         <p className="text-2xl text-center capitalize">No favorite movies added yet.</p>
       ) : (

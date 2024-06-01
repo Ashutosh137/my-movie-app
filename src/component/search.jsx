@@ -30,7 +30,7 @@ const Search = () => {
       />
       {status === "failed" && <p>Error: {error}</p>}
       {status === "succeeded" && searchQuery !== "" && (
-        <div className="absolute -left-20 top-100 shadow-2xl rounded-xl z-50 w-[450px] max-h-96 overflow-y-scroll p-4 bg-white">
+        <div className="absolute sm:-left-20 top-100 shadow-2xl rounded-xl z-50 w-[450px] max-h-96 overflow-y-scroll p-4 bg-white">
           {filteredMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
